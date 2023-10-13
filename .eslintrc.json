@@ -20,7 +20,7 @@
     "plugin:prettier/recommended",
     "prettier"
   ],
-  "ignorePatterns": ["node_modules/", "cz-config.js"],
+  "ignorePatterns": ["node_modules/", "cz-config.js", ".husky"],
   "rules": {
     "no-shadow": "off",
     "global-require": 0,
