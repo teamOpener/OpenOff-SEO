@@ -21,12 +21,7 @@
     "plugin:prettier/recommended",
     "prettier"
   ],
-  "ignorePatterns": [
-    "node_modules/",
-    "cz-config.js",
-    ".husky",
-    "tailwind.config.js"
-  ],
+  "ignorePatterns": ["node_modules/", ".husky", "*.config.js"],
   "rules": {
     "no-shadow": "off",
     "global-require": 0,
