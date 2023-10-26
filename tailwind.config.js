@@ -18,7 +18,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        // sans: ['var(--font-pretendard)'],
+        pretendard: ['var(--font-pretendard)'],
+        newyork: ['var(--font-newyork)'],
       },
     },
   },
