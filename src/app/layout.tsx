@@ -1,6 +1,8 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
+import Footer from '@/components/common/Footer';
+import Header from '@/components/common/Header';
 
 export const pretendard = localFont({
   src: './fonts/PretendardVariable.woff2',
@@ -35,9 +37,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${pretendard.variable} ${newYork.variable} font-pretendard bg-gray-900 text-white max-w-6xl mx-auto relative flex flex-col min-h-screen-safe scrollbar-hide`}
+        className={`${pretendard.variable} ${newYork.variable} font-pretendard bg-gray-900 text-white bg-cloud-pattern bg-cover bg-no-repeat max-w-6xl mx-auto relative flex flex-col min-h-screen-safe scrollbar-hide`}
       >
+        <div className="absolute top-0 w-full h-screen max-w-lg -mx-3 overflow-visible transform -translate-x-1/2 bg-no-repeat bg-cover -z-10 bg-star-pattern left-1/2 touch-none" />
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
