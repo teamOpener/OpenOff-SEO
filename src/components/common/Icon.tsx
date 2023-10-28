@@ -1,3 +1,5 @@
+'use client';
+
 import * as Icons from '@/assets/icons';
 
 type IconProps = {
@@ -11,7 +13,7 @@ const Icon = ({ name, className = 'fill-white', size = 20 }: IconProps) => {
 
   return (
     <CustomIcon
-      className={`cursor-pointer ${className}`}
+      className={`cursor-pointer hover:opacity-80 ${className}`}
       width={size}
       height={size}
     />
