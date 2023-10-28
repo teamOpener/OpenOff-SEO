@@ -15,6 +15,11 @@ module.exports = {
         pretendard: ['var(--font-pretendard)'],
         newyork: ['var(--font-newyork)'],
       },
+      backgroundImage: {
+        'cloud-pattern': "url('../assets/images/cloud.png')",
+        'star-pattern': "url('../assets/images/stars.png')",
+        sample: "url('../assets/images/sample.png')",
+      },
     },
   },
   plugins: [
