@@ -10,6 +10,10 @@ module.exports = {
         gray: {
           900: '#191919',
         },
+        gradient: {
+          100: '#62458B',
+          200: '#C68FDC',
+        },
       },
       fontFamily: {
         pretendard: ['var(--font-pretendard)'],
