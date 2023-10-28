@@ -5,7 +5,10 @@ module.exports = {
     extend: {
       colors: {
         purple: {
-          600: '#a45cff',
+          600: '#9B84F8',
+        },
+        gray: {
+          900: '#191919',
         },
       },
       fontFamily: {
@@ -14,5 +17,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-safe-area'),
+    require('tailwind-scrollbar-hide'),
+  ],
 };
