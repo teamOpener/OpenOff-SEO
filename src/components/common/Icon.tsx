@@ -8,7 +8,11 @@ type IconProps = {
   size?: number;
 };
 
-const Icon = ({ name, className = 'fill-white', size = 20 }: IconProps) => {
+const Icon = ({
+  name,
+  className = 'fill-white/[.8]',
+  size = 20,
+}: IconProps) => {
   const CustomIcon = Icons[name];
 
   return (
