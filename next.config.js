@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const path = require('path');
 
+const isBuildCommand = process.env.npm_lifecycle_event === 'build';
+
 const nextConfig = {
-  // output: 'export',
+  output: isBuildCommand ? 'export' : undefined,
   images: {
     remotePatterns: [
       {
