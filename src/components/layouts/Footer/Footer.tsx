@@ -11,7 +11,9 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <Spacing height={3.5} />
-      <AppButton />
+      <AppButton type="ios" />
+      <Spacing height={1} />
+      <AppButton type="aos" />
       <Spacing height={9} />
       <Link
         href={CONST.OFFICIAL_INSTA_LINK}
