@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import styles from './BackgroundStarImage.module.scss';
 import imageLoader from '@/utils/imageLoader';
-import fadeIn from '@/styles/animation';
+import { fadeIn } from '@/styles/animation';
 import stars from '../../../../public/img/stars.png';
 
 export default function BackgroundStarImage() {

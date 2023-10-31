@@ -4,7 +4,7 @@ import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import ShareButton from '@/components/events/ShareButton/ShareButton';
 import { Event } from '@/model/event';
-import fadeIn from '@/styles/animation';
+import { fadeIn } from '@/styles/animation';
 import styles from './Main.module.scss';
 import Title from '../Title/Title';
 import Ticket from '../Ticket/Ticket';

@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import CONST from '@/constants/Constants';
-import fadeIn from '@/styles/animation';
+import { fadeIn } from '@/styles/animation';
 import Spacing from '../../common/Spacing';
 import Icon from '../../common/Icon/Icon';
 import AppButton from '../AppButton/AppButton';

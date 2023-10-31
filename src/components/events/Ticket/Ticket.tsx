@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Event } from '@/model/event';
 import { CardTopLine, CardRightLine, CardBottomLine } from '@/assets/icons';
-import fadeIn from '@/styles/animation';
+import { fadeIn } from '@/styles/animation';
 import styles from './Ticket.module.scss';
 
 interface Props {

@@ -1,11 +1,13 @@
+import { motion } from 'framer-motion';
 import CONST from '@/constants/Constants';
+import { fadeInToTop } from '@/styles/animation';
 import styles from './Title.module.scss';
 
 export default function Title() {
   return (
-    <div className={styles.title}>
+    <motion.div className={styles.title} {...fadeInToTop}>
       <p>{CONST.YOU}</p>
       <p>{CONST.INVITED}</p>
-    </div>
+    </motion.div>
   );
 }
