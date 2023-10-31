@@ -10,6 +10,7 @@ const CONST = {
     'https://play.google.com/store/apps/details?id=com.opener.openoff',
   COPYRIGHT: 'Copyright 2023. OPENER All Rights Reserved.',
   OPEN_OFF: 'OPEN OFF',
+  SITE_URL: 'https://openoff.shop/',
 };
 
 export default CONST;

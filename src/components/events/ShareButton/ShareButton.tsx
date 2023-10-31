@@ -2,6 +2,7 @@
 
 import { Toaster } from 'react-hot-toast';
 import CopyToClipboard from 'react-copy-to-clipboard';
+import CONST from '@/constants/Constants';
 import Icon from '../../common/Icon/Icon';
 import styles from './ShareButton.module.scss';
 import useCopy from './hooks/useCopy';
@@ -16,7 +17,7 @@ export default function ShareButton({ eventIndex }: Props) {
   return (
     <div>
       <CopyToClipboard
-        text={`openoff.shop/events/${eventIndex}`}
+        text={`${CONST.SITE_URL}/events/${eventIndex}`}
         onCopy={handleSuccessCopy}
       >
         <button type="button" className={styles.button}>

@@ -2,13 +2,12 @@ import '@/styles/main.scss';
 
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-
-import Footer from '@/components/layouts/Footer/Footer';
-
 import Favicon from '../../public/img/favicon.ico';
 import BackgroundCloudImage from '@/components/layouts/BackgroundCloudImage/BackgroundCloudImage';
 import BackgroundStarImage from '@/components/layouts/BackgroundStarImage/BackgroundStarImage';
 import Container from '@/components/layouts/Container/Container';
+import Footer from '@/components/layouts/Footer/Footer';
+import CONST from '@/constants/Constants';
 
 export const pretendard = localFont({
   src: './fonts/PretendardVariable.woff2',
@@ -33,7 +32,7 @@ export const metadata: Metadata = {
     viewportFit: 'cover',
   },
   icons: [{ rel: 'icon', url: Favicon.src }],
-  metadataBase: new URL('https://de63-118-219-247-113.ngrok-free.app/'),
+  metadataBase: new URL(CONST.SITE_URL),
 };
 
 export default function RootLayout({
