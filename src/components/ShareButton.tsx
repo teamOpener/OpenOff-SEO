@@ -13,7 +13,7 @@ export default function ShareButton({ eventIndex }: Props) {
     // TODO
     toast.success('주소를 복사했습니다.', {
       style: {
-        backgroundColor: '#000',
+        backgroundColor: '#191919',
         color: '#fff',
       },
     });
