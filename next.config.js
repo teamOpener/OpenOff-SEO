@@ -7,13 +7,16 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'github.com', // TODO
+        hostname: process.env.NEXT_PUBLIC_IMAGE_SERVER,
       },
     ],
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
     prependData: `@import "@/styles/abstracts/variables";`,
+  },
+  experimental: {
+    isrMemoryCacheSize: 0,
   },
   webpack(config) {
     config.module.rules.push({
