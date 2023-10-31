@@ -1,6 +1,7 @@
 'use client';
 
 import * as Icons from '@/assets/icons';
+import styles from './Icon.module.scss';
 
 type IconProps = {
   name: keyof typeof Icons;
@@ -8,16 +9,12 @@ type IconProps = {
   size?: number;
 };
 
-const Icon = ({
-  name,
-  className = 'fill-white/[.8]',
-  size = 20,
-}: IconProps) => {
+const Icon = ({ name, className, size = 20 }: IconProps) => {
   const CustomIcon = Icons[name];
 
   return (
     <CustomIcon
-      className={`cursor-pointer hover:opacity-80 ${className}`}
+      className={`${styles.icon} ${className}`}
       width={size}
       height={size}
     />

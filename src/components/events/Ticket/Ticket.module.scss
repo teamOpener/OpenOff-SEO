@@ -1,0 +1,56 @@
+.card {
+  padding-top: 3rem;
+
+  .inner {
+    padding-top: 0.75rem;
+    padding-left: 1.25rem;
+    width: 357px;
+
+    .top {
+      margin-top: -1.29rem;
+      margin-right: 0.09rem;
+      border-right: 4px solid $color-white;
+      border-bottom: 1px solid $color-white;
+      padding-bottom: 0.25rem;
+      display: flex;
+      flex-wrap: wrap;
+
+      h4 {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+      }
+    }
+
+    .middle {
+      display: flex;
+
+      .left {
+        width: 100%;
+        margin-right: -0.25rem;
+      }
+
+      .right {
+        margin-top: -0.28rem;
+        margin-right: -0.3rem;
+      }
+
+      .info {
+        border-bottom: 1px solid $color-white;
+        padding: 0.25rem 0.25rem 0.25rem 0;
+
+        p {
+          font-weight: 300;
+        }
+      }
+
+      .poster {
+        margin: 1.5rem 0.25rem;
+        background-position: center;
+      }
+    }
+  }
+
+  .bottom {
+    margin-top: -0.6rem;
+  }
+}

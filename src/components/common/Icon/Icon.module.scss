@@ -1,0 +1,9 @@
+.icon {
+  cursor: pointer;
+  fill: $color-white;
+  opacity: 0.9;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

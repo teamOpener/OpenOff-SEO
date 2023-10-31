@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .insta {
+    font-weight: 300;
+  }
+
+  .copyright {
+    font-family: $font-newyork;
+  }
+
+  .logo {
+    font-family: $font-newyork;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}

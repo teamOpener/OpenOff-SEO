@@ -1,6 +1,20 @@
 /** @type {import('next').NextConfig} */
+const path = require('path');
+
 const nextConfig = {
-  output: 'export',
+  // output: 'export',
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'github.com', // TODO
+      },
+    ],
+  },
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+    prependData: `@import "@/styles/abstracts/variables";`,
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,

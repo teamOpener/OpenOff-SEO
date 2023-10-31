@@ -1,0 +1,11 @@
+.image {
+  z-index: -9;
+  object-fit: cover;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
