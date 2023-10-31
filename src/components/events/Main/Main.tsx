@@ -1,8 +1,10 @@
 'use client';
 
 import { useRef } from 'react';
+import { motion } from 'framer-motion';
 import ShareButton from '@/components/events/ShareButton/ShareButton';
 import { Event } from '@/model/event';
+import fadeIn from '@/styles/animation';
 import styles from './Main.module.scss';
 import Title from '../Title/Title';
 import Ticket from '../Ticket/Ticket';
@@ -36,10 +38,10 @@ export default function Main({ event }: Props) {
         <Ticket event={event} />
       </section>
 
-      <section className={styles.buttons}>
+      <motion.section className={styles.buttons} {...fadeIn}>
         <DownloadButton onClick={handleDown} />
-        <ShareButton eventIndex={1} />
-      </section>
+        <ShareButton eventIndex={event.index} />
+      </motion.section>
     </main>
   );
 }

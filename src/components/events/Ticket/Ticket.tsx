@@ -1,7 +1,9 @@
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { Event } from '@/model/event';
-import styles from './Ticket.module.scss';
 import { CardTopLine, CardRightLine, CardBottomLine } from '@/assets/icons';
+import fadeIn from '@/styles/animation';
+import styles from './Ticket.module.scss';
 
 interface Props {
   event: Event;
@@ -9,7 +11,7 @@ interface Props {
 
 export default function Ticket({ event }: Props) {
   return (
-    <section className={styles.card}>
+    <motion.section className={styles.card} {...fadeIn}>
       <CardTopLine />
 
       <div className={styles.inner}>
@@ -45,6 +47,6 @@ export default function Ticket({ event }: Props) {
       <div className={styles.bottom}>
         <CardBottomLine />
       </div>
-    </section>
+    </motion.section>
   );
 }
