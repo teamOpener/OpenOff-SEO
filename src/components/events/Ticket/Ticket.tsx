@@ -4,6 +4,7 @@ import { Event } from '@/model/event';
 import { CardTopLine, CardRightLine, CardBottomLine } from '@/assets/icons';
 import { fadeIn } from '@/styles/animation';
 import styles from './Ticket.module.scss';
+import { remoteImageLoader } from '@/utils/imageLoader';
 
 interface Props {
   event: Event;
@@ -30,6 +31,7 @@ export default function Ticket({ event }: Props) {
             </div>
 
             <Image
+              loader={remoteImageLoader}
               src={event.imgUrl}
               alt="poster"
               width={288}
