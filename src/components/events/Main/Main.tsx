@@ -40,7 +40,7 @@ export default function Main({ event }: Props) {
 
       <motion.section className={styles.buttons} {...fadeIn}>
         <DownloadButton onClick={handleDown} />
-        <ShareButton eventIndex={event.index} />
+        <ShareButton eventIndex={event.eventId} />
       </motion.section>
     </main>
   );

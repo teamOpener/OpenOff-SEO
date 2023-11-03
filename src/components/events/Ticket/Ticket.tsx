@@ -23,16 +23,17 @@ export default function Ticket({ event }: Props) {
         <div className={styles.middle}>
           <div className={styles.left}>
             <div className={styles.info}>
-              <p>{event.address}</p>
+              <p>{`${event.streetLoadAddress}${event.detailAddress}`}</p>
             </div>
 
             <div className={styles.info}>
-              <p>{event.dateTime}</p>
+              {/* TODO */}
+              <p>{event.eventDateList[0].toString()}</p>
             </div>
 
             <Image
               loader={remoteImageLoader}
-              src={event.imgUrl}
+              src={event.imageUrl}
               alt="poster"
               width={288}
               height={288}
