@@ -1,20 +1,36 @@
+import { Metadata } from 'next';
+import { fetchEvent, fetchEventIds } from '@/apis/event-instance';
+import META from '@/constants/Meta';
 import Main from '@/components/events/Main/Main';
-import { sampleEvent2 } from '@/mock/sampleEvent';
 
 type Props = {
   params: { slug: string };
 };
 
-export default function Page({ params }: Props) {
-  // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
-  const index = params.slug;
-  return <Main event={sampleEvent2} />;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const event = await fetchEvent(params.slug);
+
+  return {
+    title: META.TITLE,
+    description: `${event.title}`,
+    openGraph: {
+      title: `${event.title}`,
+      description: META.DESCRIPTION,
+      images: [event.imageUrl],
+    },
+  };
+}
+
+export default async function Page({ params }: Props) {
+  const event = await fetchEvent(params.slug);
+
+  return <Main event={event} />;
 }
 
 export async function generateStaticParams() {
-  const events = [1, 2, 3, 4, 5];
+  const eventIds = await fetchEventIds();
 
-  return events.map((event) => ({
+  return eventIds.eventIdList.map((event) => ({
     slug: event.toString(),
   }));
 }
