@@ -3,12 +3,12 @@
 import Image from 'next/image';
 import cloud from '../../../../public/img/cloud.png';
 import styles from './BackgroundCloudImage.module.scss';
-import imageLoader from '@/utils/imageLoader';
+import localImageLoader from '@/services/imageLoader';
 
 export default function BackgroundCloudImage() {
   return (
     <Image
-      loader={imageLoader}
+      loader={localImageLoader}
       alt="background image"
       src={cloud}
       fill

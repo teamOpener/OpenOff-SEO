@@ -4,7 +4,7 @@ import { Event } from '@/model/event';
 import { CardTopLine, CardRightLine, CardBottomLine } from '@/assets/icons';
 import { fadeIn } from '@/styles/animation';
 import styles from './Ticket.module.scss';
-import { remoteImageLoader } from '@/utils/imageLoader';
+import { remoteImageLoader } from '@/services/imageLoader';
 
 interface Props {
   event: Event;
